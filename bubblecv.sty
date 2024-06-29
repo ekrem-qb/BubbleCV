@@ -370,9 +370,7 @@
 % Parameter 3:              Percent of the progress-bar in range [0, 1].
 \newcommand{\cvskill}[3]{%
     \ifthenelse{\equal{\iscvsidebar}{1}}{%
-	\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X>{\raggedleft\arraybackslash}X}%
- 		\textcolor{black}{\textbf{#1}} & \textcolor{cvcolor}{#2}%
-	\end{tabularx}%
+        \textcolor{black}{\textbf{#1}} \hspace*{\fill} \textcolor{cvcolor}{#2} %
 	
 	\begin{tikzpicture}[scale=1,rounded corners=\cvscale*0.5mm,very thin]%
 		\fill [cvlightcolor] (0,0) rectangle (\linewidth, 0.15*\cvscale);%
